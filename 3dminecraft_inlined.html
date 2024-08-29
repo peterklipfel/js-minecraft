@@ -148,8 +148,46 @@
 </head>
 <body>
 
-	<!-- Three.js -->
-	<script>
+	<div id = "gameScreenGUI">
+		<img src = "texture/cobblestone/cobblestone.png" class = "hotbar" id = "slot1">
+		<img src = "texture/dirt/dirt.png" class = "hotbar" id = "slot2">
+		<img src = "texture/grass/side.jpg" class = "hotbar" id = "slot3">
+		<img src = "texture/oakLeaves/oakLeaves.png" class = "hotbar" id = "slot4">
+		<img src = "texture/oakLog/side.png" class = "hotbar" id = "slot5">
+		<img src = "texture/sand/sand.png" class = "hotbar" id = "slot6">
+		<img src = "texture/glass/glass.png" class = "hotbar" id = "slot7">
+		<img src = "texture/brick/brick.png" class = "hotbar" id = "slot8">
+		<img src = "texture/plank/plank.png" class = "hotbar" id = "slot9">
+
+		<img src = "cursor.png" id = "cursor">
+	</div>
+
+
+	<div id = "titleScreenGUI">
+		<img src = "titleScreen/one.jpeg" class = "titleScreen">
+		<img src = "titleScreen/two.jpeg" class = "titleScreen">
+		<img src = "titleScreen/three.jpeg" class = "titleScreen">
+		<img src = "titleScreen/four.jpeg" class = "titleScreen">
+		<img src = "titleScreen/five.jpeg" class = "titleScreen">
+		<img src = "titleScreen/six.jpeg" class = "titleScreen">
+
+		<button id = "newgame" class = "startingButtons" style = "top : 40%; z-index: 10000;">New Game</button>
+		<button id = "loadgame" class = "startingButtons" style = "top : 55%">Load Game</button>
+		<button id = "options" class = "startingButtons" style = "top : 70%">Options</button>
+		<input type = "file" style = "position: absolute; color: white; display: none" id = "inputFile" accept = ".json">
+
+		<img src = "minecraftlogo.png" id = "startingLogo">
+	</div>
+
+
+	<div id = "escapeScreenGUI">
+		<div id = "escapeScreen"></div>
+		<button id = "options2" class = "escapeButtons" style = "top : 30%">Options</button>
+		<button id = "titlescreensave" class = "escapeButtons" style = "top : 45%">Save and Quit to Title</button>
+	</div>
+
+ 	<script type="text/javascript">
+		// <!-- Three.js -->
 		/**
 		 * @license
 		 * Copyright 2010-2021 Three.js Authors
@@ -37238,47 +37276,8 @@
 			module.exports = saveAs;
 		}
 
-	</script>
-
-	<div id = "gameScreenGUI">
-		<img src = "texture/cobblestone/cobblestone.png" class = "hotbar" id = "slot1">
-		<img src = "texture/dirt/dirt.png" class = "hotbar" id = "slot2">
-		<img src = "texture/grass/side.jpg" class = "hotbar" id = "slot3">
-		<img src = "texture/oakLeaves/oakLeaves.png" class = "hotbar" id = "slot4">
-		<img src = "texture/oakLog/side.png" class = "hotbar" id = "slot5">
-		<img src = "texture/sand/sand.png" class = "hotbar" id = "slot6">
-		<img src = "texture/glass/glass.png" class = "hotbar" id = "slot7">
-		<img src = "texture/brick/brick.png" class = "hotbar" id = "slot8">
-		<img src = "texture/plank/plank.png" class = "hotbar" id = "slot9">
-
-		<img src = "cursor.png" id = "cursor">
-	</div>
 
 
-	<div id = "titleScreenGUI">
-		<img src = "titleScreen/one.jpeg" class = "titleScreen">
-		<img src = "titleScreen/two.jpeg" class = "titleScreen">
-		<img src = "titleScreen/three.jpeg" class = "titleScreen">
-		<img src = "titleScreen/four.jpeg" class = "titleScreen">
-		<img src = "titleScreen/five.jpeg" class = "titleScreen">
-		<img src = "titleScreen/six.jpeg" class = "titleScreen">
-
-		<button id = "newgame" class = "startingButtons" style = "top : 40%; z-index: 10000;">New Game</button>
-		<button id = "loadgame" class = "startingButtons" style = "top : 55%">Load Game</button>
-		<button id = "options" class = "startingButtons" style = "top : 70%">Options</button>
-		<input type = "file" style = "position: absolute; color: white; display: none" id = "inputFile" accept = ".json">
-
-		<img src = "minecraftlogo.png" id = "startingLogo">
-	</div>
-
-
-	<div id = "escapeScreenGUI">
-		<div id = "escapeScreen"></div>
-		<button id = "options2" class = "escapeButtons" style = "top : 30%">Options</button>
-		<button id = "titlescreensave" class = "escapeButtons" style = "top : 45%">Save and Quit to Title</button>
-	</div>
-
- 	<script type="text/javascript">
  		var newGameButton = document.getElementById("newgame");
  		var loadGameButton = document.getElementById("loadgame");
  		var titleScreenSaveButton = document.getElementById("titlescreensave");
